@@ -1,32 +1,5 @@
 
 
-```
-kepler-tce-project/
-├── data/raw/                          # the CSV you supplied
-├── src/
-│   ├── data_loader.py      # label building (Option A / B, see above)
-│   ├── preprocessing.py    # column selection, log1p, impute+scale
-│   ├── split.py             # grouped train/val/test split (by kepid)
-│   ├── train_ml.py          # LogReg, Random Forest, XGBoost, SVM
-│   ├── models_pytorch.py    # MLPClassifier + TabTransformer definitions
-│   ├── train_nn.py          # trains MLP / Transformer, live viz, gifs
-│   ├── evaluate.py          # scores every saved model on the test set
-│   ├── langchain_report.py  # LangChain narrative report (LLM or template)
-│   └── predict.py           # score new TCE rows with any saved model
-├── models/
-│   ├── ml/*.joblib                    # 4 trained classical models
-│   └── dl/*.pt, *_config.joblib, preprocessor.joblib
-├── reports/
-│   ├── figures/*.png, *.gif           # training curves, confusion/ROC,
-│   │                                     embedding-evolution animations
-│   ├── model_comparison.csv
-│   └── summary_report.txt
-├── requirements.txt
-└── MASTER_PROMPT.md                   # the original spec this was built from
-```
-
-## Results (this run, proxy labels — see caveat above)
-
 | model | accuracy | precision | recall | f1 | roc_auc |
 |---|---|---|---|---|---|
 | logistic_regression | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
