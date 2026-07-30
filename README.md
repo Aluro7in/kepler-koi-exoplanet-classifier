@@ -213,5 +213,3 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 <p align="center">
 
-  <i>For the full specification, original rationale, and label‑mapping details, see that file.</i>
-</p>
