@@ -1,15 +1,4 @@
-# Kepler Q1‑Q17 DR25 TCE — ML + DL + Transformer Classification Pipeline
 
-A full, runnable pipeline that trains and compares **4 classical ML models**,
-a **PyTorch MLP**, and a **PyTorch Transformer** (FT-Transformer-style, tabular
-self-attention) on the Kepler DR25 Threshold Crossing Event (TCE) table —
-classifying each TCE as a likely planet signal (`PLANET`) vs. not
-(`NOT_PLANET`) — with live/animated visualization of how each neural network
-learns, and an optional LangChain-generated narrative report.
-
-Built from the master prompt in `MASTER_PROMPT.md`.
-
-## ⚠️ Read this first: label strategy
 
 This delivery of the DR25 TCE table (`av_training_set`, `av_pred_class`, etc.)
 ships with **empty disposition columns** — NASA didn't include them in this
