@@ -1,22 +1,4 @@
-s (e.g. no
-   internet, firewalled sandbox — **this is what happened when this repo was
-   built and run**, see logs below), it builds a **weak proxy label** instead:
-   `PLANET = (tce_rogue_flag == 0) AND (tce_nkoi > 0)`.
 
-**The numbers in `reports/model_comparison.csv` in this repo were produced
-using the Option B proxy label**, because this build environment had no
-route to the NASA Exoplanet Archive (`HTTP 403`). Near-perfect accuracy
-across every model is expected in that case — `tce_nkoi`/`tce_rogue_flag`
-correlate strongly with pipeline-internal features already in the table, so
-this is really "can the model reconstruct a rule from the same table"
-rather than a validated exoplanet-detection benchmark.
-
-**To get scientifically meaningful results, run this on a machine with
-internet access** — `data_loader.py` will then automatically use Option A
-and you'll get real, harder, 3-class-collapsed-to-2-class disposition
-labels. No code changes needed.
-
-## What's in here
 
 ```
 kepler-tce-project/
