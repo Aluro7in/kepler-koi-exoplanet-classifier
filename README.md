@@ -1,14 +1,4 @@
-
-
-This delivery of the DR25 TCE table (`av_training_set`, `av_pred_class`, etc.)
-ships with **empty disposition columns** — NASA didn't include them in this
-export. `src/data_loader.py` handles this automatically:
-
-1. **Option A (tries first):** downloads NASA's cumulative KOI table and
-   merges in the real `koi_disposition` (`CONFIRMED` / `CANDIDATE` /
-   `FALSE POSITIVE`) by `(kepid, tce_plnt_num)`. This needs outbound internet
-   access to `exoplanetarchive.ipac.caltech.edu`.
-2. **Option B (automatic fallback):** if that request fails (e.g. no
+s (e.g. no
    internet, firewalled sandbox — **this is what happened when this repo was
    built and run**, see logs below), it builds a **weak proxy label** instead:
    `PLANET = (tce_rogue_flag == 0) AND (tce_nkoi > 0)`.
