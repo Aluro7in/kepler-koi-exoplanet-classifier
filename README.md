@@ -212,6 +212,6 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ---
 
 <p align="center">
-  <b>Built from the master prompt in <code>MASTER_PROMPT.md</code>.</b><br>
+
   <i>For the full specification, original rationale, and label‑mapping details, see that file.</i>
 </p>
